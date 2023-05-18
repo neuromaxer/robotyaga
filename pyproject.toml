@@ -6,6 +6,7 @@ authors = ["neuromaxer <neuromaxed@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9.5"
+smbus = "^1.1.post2"
 
 [tool.poetry.dev-dependencies]
 

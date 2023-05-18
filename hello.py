@@ -1,3 +1,3 @@
 import socket
 print(f"{socket.gethostname()} is alive and well!")
-print('Hello nano!')
+print('Hello haha!')
