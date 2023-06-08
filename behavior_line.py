@@ -1,12 +1,7 @@
 from robot import Robot
-from Raspi_MotorHAT import Raspi_MotorHAT
 from time import sleep
 
 r = Robot()
-r.left_motor.setSpeed(150)
-r.right_motor.setSpeed(150)
-
-r.left_motor.run(Raspi_MotorHAT.FORWARD)
-r.right_motor.run(Raspi_MotorHAT.FORWARD)
-
+r.set_left(80)
+r.set_right(80)
 sleep(1)
