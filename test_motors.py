@@ -13,11 +13,11 @@ def turnOffMotors():
 
 atexit.register(turnOffMotors)
 
-lm.setSpeed(150)
-rm.setSpeed(150)
+lm.setSpeed(180)
+rm.setSpeed(180)
 
 lm.run(Raspi_MotorHAT.FORWARD)
 rm.run(Raspi_MotorHAT.FORWARD)
-time.sleep(1)
+time.sleep(5)
 
 print('finished')

@@ -23,7 +23,7 @@ class Robot:
         else:
             mode = Raspi_MotorHAT.RELEASE
 
-        assert 0 <= speed <= 100, f"Speed {speed} out of range (0-100)"
+        assert -100 <= speed <= 100, f"Speed {speed} out of range (0-100)"
         return mode, int(abs(speed) * 255 / 100)
 
     def set_left(self, speed: int):
