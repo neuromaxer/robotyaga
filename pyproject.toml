@@ -5,8 +5,10 @@ description = "Robotic Friend"
 authors = ["neuromaxer <neuromaxed@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.9.5"
+python = "^3.9"
 smbus = "^1.1.post2"
+rpi-gpio = "^0.7.1"
+gpiozero = "^2.0.1"
 
 [tool.poetry.dev-dependencies]
 
