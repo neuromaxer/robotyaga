@@ -1,5 +1,6 @@
 from Raspi_MotorHAT import Raspi_MotorHAT
 from typing import Tuple
+from gpiozero import DistanceSensor
 import atexit
 
 class Robot:
@@ -10,6 +11,10 @@ class Robot:
         # get local variable for each motor
         self.left_motor = self._mh.getMotor(1)
         self.right_motor = self._mh.getMotor(2)
+
+        # Setup the distance sensors
+        self.left_distance_sensor = DistanceSensor(echo=17, trigger=27, queue_len=2)
+        self.right_distance_sensor = DistanceSensor(echo=5, trigger=6, queue_len=2)
 
         # ensure the motors get stopped when the code exits
         atexit.register(self.stop_motors)
@@ -39,3 +44,4 @@ class Robot:
     def stop_motors(self):
         self.left_motor.run(Raspi_MotorHAT.RELEASE)
         self.right_motor.run(Raspi_MotorHAT.RELEASE)
+
